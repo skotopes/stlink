@@ -368,7 +368,7 @@ int stlink_flash_loader_run(stlink_t *sl, flash_loader_t* fl, stm32_addr_t targe
 // by increasing the sleep-per-round to the same order-of-magnitude as
 // the tick-rounding that the OS uses, the wait until the error message is
 // reduced to the same order of magnitude as what was intended. -- REW.
-#define WAIT_ROUNDS 100
+#define WAIT_ROUNDS 1000
     /* wait until done (reaches breakpoint) */
     for (i = 0; i < WAIT_ROUNDS; i++) {
         usleep(1000);
